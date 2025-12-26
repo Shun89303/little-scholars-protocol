@@ -1,13 +1,10 @@
 import "./Home.css";
+import Welcome from "./sections/Welcome/Welcome";
 export default function Home() {
   return (
     <main className="home">
       {/* 1. Welcome / Identity Section */}
-      <section className="home-section home-welcome">
-        <h1>Welcome back</h1>
-        <p>Little Scholars Management System</p>
-        <span>Academic Year 2025–2026</span>
-      </section>
+      <Welcome />
 
       {/* 2. Mini Overview (Light Dashboard) */}
       <section className="home-section home-overview">
