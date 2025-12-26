@@ -1,0 +1,97 @@
+.nav-container {
+    position: fixed;
+    right: 20px;
+    top: 70%;
+
+    transform: translateY(-50%);
+    z-index: 1000;
+}
+
+.nav-icon {
+
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    color: white;
+    background-color: #4CAF50; 
+}
+
+.nav-icon.open {
+    transform: translateX(-120px);
+}
+
+.nav-icon:hover {
+    background-color: #357ABD;
+}
+
+.nav-menu {
+    position: absolute;
+    top: -140%;
+    right: 0;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    opacity: 0;
+
+    pointer-events: none;
+    transform-origin: right center;
+}
+
+.nav-menu.show {
+    opacity: 1;
+    pointer-events: auto;
+    animation: scale-up-center 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.nav-menu a {
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #333;
+    text-decoration: none;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    transition: background-color 0.2s;
+}
+
+.nav-menu a:hover {
+    background-color: #f0f0f0;
+}
+
+.scale-up-center {
+    -webkit-animation: scale-up-center 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes scale-up-center {
+    0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    }
+    100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    }
+}
+
+@keyframes scale-up-center {
+    0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    }
+    100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    }
+}
