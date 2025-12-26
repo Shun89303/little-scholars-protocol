@@ -2,6 +2,7 @@ import "./Home.css";
 import Welcome from "./sections/Welcome/Welcome";
 import Overview from "./sections/Overview/Overview";
 import Today from "./sections/Today/Today";
+import Announcements from "./sections/Announcements/Announcements";
 
 export default function Home() {
   return (
@@ -16,10 +17,7 @@ export default function Home() {
       <Today />
 
       {/* 4. System Highlights / Announcements */}
-      <section className="home-section home-announcements">
-        <h2>Announcements</h2>
-        <p>No announcements available</p>
-      </section>
+      <Announcements />
     </main>
   );
 }
