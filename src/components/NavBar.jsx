@@ -13,6 +13,7 @@ const NavBar = () => {
                 ☰
             </div>
             <div className={`nav-menu ${open ? "show" : ""}`}>
+                <a href="#">Home</a>
                 <a href="#">Dashboard</a>
                 <a href="#">Students</a>
                 <a href="#">Classes</a>
