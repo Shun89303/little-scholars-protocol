@@ -1,5 +1,6 @@
 import "./Home.css";
 import Welcome from "./sections/Welcome/Welcome";
+import Overview from "./sections/Overview/Overview";
 export default function Home() {
   return (
     <main className="home">
@@ -7,20 +8,7 @@ export default function Home() {
       <Welcome />
 
       {/* 2. Mini Overview (Light Dashboard) */}
-      <section className="home-section home-overview">
-        <div className="overview-card">
-          <h3>Students</h3>
-          <p>—</p>
-        </div>
-        <div className="overview-card">
-          <h3>Classes</h3>
-          <p>—</p>
-        </div>
-        <div className="overview-card">
-          <h3>Teachers</h3>
-          <p>—</p>
-        </div>
-      </section>
+      <Overview />
 
       {/* 3. Today / Now Section */}
       <section className="home-section home-today">
