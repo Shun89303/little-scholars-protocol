@@ -1,6 +1,8 @@
 import "./Home.css";
 import Welcome from "./sections/Welcome/Welcome";
 import Overview from "./sections/Overview/Overview";
+import Today from "./sections/Today/Today";
+
 export default function Home() {
   return (
     <main className="home">
@@ -11,12 +13,7 @@ export default function Home() {
       <Overview />
 
       {/* 3. Today / Now Section */}
-      <section className="home-section home-today">
-        <h2>Today</h2>
-        <ul>
-          <li>No data yet</li>
-        </ul>
-      </section>
+      <Today />
 
       {/* 4. System Highlights / Announcements */}
       <section className="home-section home-announcements">

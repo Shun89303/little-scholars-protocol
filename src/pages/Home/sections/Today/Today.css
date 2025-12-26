@@ -1,0 +1,76 @@
+.today {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 20px 0;
+}
+
+.today h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.today-classes,
+.upcoming-events {
+    background-color: #f9f9f9;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.today-classes h3,
+.upcoming-events h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.today-classes ul,
+.upcoming-events ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.today-classes li,
+.upcoming-events li {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.today-classes li:last-child,
+.upcoming-events li:last-child {
+    border-bottom: none;
+}
+
+.time,
+.date {
+    font-weight: 500;
+    color: #555;
+}
+
+.name,
+.event {
+    font-weight: 400;
+    color: #333;
+}
+
+/* Responsive layout: stack classes and events vertically on smaller screens */
+@media (max-width: 768px) {
+    .today {
+        gap: 16px;
+    }
+
+    .today-classes,
+    .upcoming-events {
+        padding: 12px;
+    }
+
+    .today-classes h3,
+    .upcoming-events h3 {
+        font-size: 1rem;
+    }
+}
