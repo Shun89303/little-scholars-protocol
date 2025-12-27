@@ -55,7 +55,7 @@
     animation: scale-up-center 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
-.nav-menu a {
+.nav-menu a, .nav-menu Link {
     background-color: #fff;
     padding: 10px 20px;
     border-radius: 10px;
@@ -63,9 +63,10 @@
     text-decoration: none;
     box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     transition: background-color 0.2s;
+    display: block;
 }
 
-.nav-menu a:hover {
+.nav-menu a:hover, .nav-menu Link:hover {
     background-color: #f0f0f0;
 }
 
