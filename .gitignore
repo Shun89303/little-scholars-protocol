@@ -12,7 +12,10 @@ dist
 dist-ssr
 *.local
 
-documentation
+command.txt
+latestUpdate.txt
+nextStep.txt
+task.txt
 
 # Editor directories and files
 .vscode/*
