@@ -1,1 +1,0 @@
-Instead of Home page appearing on the website screen only when users clicked on the nav link Home page, I want the website to show the home page immediately when the website loads.

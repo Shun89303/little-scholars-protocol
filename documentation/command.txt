@@ -1,1 +1,0 @@
-Read the file to understand the current status of the project and then read the file to understand your current task to do and then proceed to do your task. Finally when you have accomplished your task, recommend the future next steps for what to do by writing text in the file.
