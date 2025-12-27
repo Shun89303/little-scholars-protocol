@@ -13,9 +13,11 @@ dist-ssr
 *.local
 
 command.txt
-latestUpdate.txt
+newUpdate.txt
 nextStep.txt
+oldUpdate.txt
 task.txt
+updateCommand.txt
 
 # Editor directories and files
 .vscode/*
