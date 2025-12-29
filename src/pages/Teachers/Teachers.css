@@ -80,7 +80,7 @@
 
 .teachers-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 20px;
 }
 
@@ -89,6 +89,8 @@
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   padding: 20px;
+  display: flex;
+  gap: 15px;
   transition: transform 0.2s ease-in-out;
 }
 
@@ -97,25 +99,16 @@
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-.teacher-header {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  margin-bottom: 15px;
-  padding-bottom: 15px;
-  border-bottom: 1px solid #eee;
-}
-
 .teacher-avatar {
   flex-shrink: 0;
 }
 
-.avatar-placeholder {
-  width: 50px;
-  height: 50px;
+.avatar-initials {
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
-  background: #4CAF50;
-  color: white;
+  background: #e3f2fd;
+  color: #1976d2;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -133,14 +126,25 @@
   margin: 0 0 5px 0;
 }
 
-.teacher-department {
+.teacher-email {
   color: #666;
   font-size: 14px;
-  margin: 0;
+  margin: 0 0 10px 0;
 }
 
-.teacher-status {
-  flex-shrink: 0;
+.teacher-details {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.department {
+  background: #f3e5f5;
+  color: #7b1fa2;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
 }
 
 .status-badge {
@@ -148,7 +152,6 @@
   border-radius: 4px;
   font-size: 12px;
   font-weight: 600;
-  text-transform: uppercase;
 }
 
 .status-badge.active {
@@ -161,59 +164,54 @@
   color: #856404;
 }
 
-.teacher-details {
-  margin-bottom: 15px;
-}
-
-.teacher-contact,
 .teacher-experience {
-  display: flex;
-  justify-content: space-between;
-  padding: 8px 0;
-  border-bottom: 1px solid #f5f5f5;
+  margin-bottom: 10px;
 }
 
-.teacher-classes {
-  padding: 8px 0;
-}
-
-.teacher-contact:last-child,
-.teacher-experience:last-child {
-  border-bottom: none;
-}
-
-.label {
+.teacher-experience .label {
   color: #666;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 12px;
 }
 
-.value {
+.teacher-experience .value {
   color: #333;
   font-weight: 600;
   font-size: 14px;
+  margin-left: 5px;
+}
+
+.teacher-classes {
+  margin-bottom: 15px;
+}
+
+.teacher-classes .label {
+  color: #666;
+  font-weight: 500;
+  font-size: 12px;
+  display: block;
+  margin-bottom: 5px;
 }
 
 .class-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
-  margin-top: 5px;
+  gap: 5px;
 }
 
 .class-tag {
-  background: #e3f2fd;
-  color: #1976d2;
-  padding: 3px 8px;
-  border-radius: 4px;
-  font-size: 12px;
+  background: #e8eaf6;
+  color: #1565c0;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 11px;
   font-weight: 500;
 }
 
 .teacher-actions {
   display: flex;
   gap: 8px;
-  justify-content: flex-end;
+  flex-wrap: wrap;
 }
 
 .action-btn {
@@ -222,7 +220,6 @@
   border-radius: 4px;
   cursor: pointer;
   font-size: 12px;
-  transition: opacity 0.2s;
 }
 
 .action-btn.view {
@@ -240,6 +237,116 @@
   color: #2e7d32;
 }
 
+.action-btn.delete {
+  background: #ffebee;
+  color: #c62828;
+}
+
 .action-btn:hover {
   opacity: 0.8;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.modal-header h2 {
+  margin: 0;
+  color: #333;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+}
+
+.close-btn:hover {
+  color: #333;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 20px;
+  border-top: 1px solid #eee;
+}
+
+.cancel-btn {
+  background: #f5f5f5;
+  color: #666;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cancel-btn:hover {
+  background: #e0e0e0;
+}
+
+.save-btn {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.save-btn:hover {
+  background: #45a049;
 }
